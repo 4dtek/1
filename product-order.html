@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلب المنتج</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- قسم تفاصيل المنتج -->
+    <section class="product-details">
+        <div class="product-image">
+            <img id="product-image" src="" alt="تفاصيل المنتج">
+        </div>
+        <div class="product-info">
+            <h2 id="product-title">اسم المنتج</h2>
+            <p class="price"><span id="product-price">0 دج</span></p>
+        </div>
+    </section>
+
+    <!-- نموذج الطلب -->
+    <section class="order-form">
+        <h2>طلب المنتج</h2>
+        <form id="order-form">
+            <div class="form-group">
+                <label for="full-name">الاسم الكامل</label>
+                <input type="text" id="full-name" placeholder="اكتب اسمك الكامل" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone-number">رقم الهاتف</label>
+                <input type="text" id="phone-number" placeholder="اكتب رقم هاتفك" required>
+            </div>
+
+            <div class="form-group">
+                <label for="wilaya">الولاية</label>
+                <select id="wilaya" required>
+                    <option value="">اختر الولاية</option>
+                    <option value="Algiers">الجزائر</option>
+                    <option value="Oran">وهران</option>
+                    <!-- أضف المزيد من الولايات هنا -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="baladiya">البلدية</label>
+                <input type="text" id="baladiya" placeholder="اكتب البلدية" required>
+            </div>
+
+            <div class="form-group">
+                <label for="quantity">الكمية</label>
+                <input type="number" id="quantity" min="1" value="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="size">اختر المقاس</label>
+                <select id="size" required>
+                    <option value="1">طاي 1 (38-40)</option>
+                    <option value="2">طاي 2 (44-42)</option>
+                    <option value="3">طاي 3 (46-48)</option>
+                    <option value="4">طاي 4 (50-52-54)</option>
+                    <option value="5">طاي 5 (56-58-60)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="color">اختر اللون</label>
+                <div class="color-options">
+                    <label><input type="radio" name="color" value="green" required> أخضر</label>
+                    <label><input type="radio" name="color" value="blue"> أزرق</label>
+                    <label><input type="radio" name="color" value="orange"> برتقالي</label>
+                    <label><input type="radio" name="color" value="grey"> رمادي</label>
+                </div>
+            </div>
+
+            <button type="submit">اشترِ الآن</button>
+        </form>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
